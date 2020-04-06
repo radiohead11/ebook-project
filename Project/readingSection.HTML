@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./CSS/readingSection.css">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="smallScreenForReadingSection.css">	
+</head>
+<body style="height:100%; margin: 50px 50px 50px 50px ;background: linear-gradient(to bottom, #BEF4FF, #00CBE9);">
+
+    <div class="header"><center>ASSAMESE</center></div>
+
+    <div class="userCOntribution">
+        <div class="contribute">contribute</div>
+	 	<div class="volunteer">volunteer</div>
+	 	<div class="donate">donate</div>
+	</div>
+
+	<div class="genre">
+		<div class="firstRowOfGenre" style="height: 50%">
+			<div id="poetry" onclick="poetry()">poetry</div>
+			<div id="fiction" onclick="fiction()">fiction</div>
+			<div id="nonFiction" onclick="nonFiction()">non fiction</div>
+        </div>
+        <div class="secondRowOfGenre">
+        	<div id="dictionary" onclick="dictionary()">dictionary</div>
+        	<div id="articles" onclick="articles()">articles</div>
+        	<div id="review" onclick="review()">review</div>
+        </div>
+    </div>
+
+    <div class="sortingSection"> 
+             <div id="genreOfSortingSection">genre</div>
+             <div id="recent" onclick="markRecent()">recent</div>
+             <div id="topRated" onclick="markTopRated()">top rated</div>
+             <div id="mostRead" onclick="markMostRead()">most read</div>
+	</div>
+
+	<div class= "mainBlock" style="min-height:70%; overflow: auto;background: rgba(255,255,255,.2);">
+		    <div class="storyBlock">
+			<div class="albumArt"></div>
+		</div>
+	</div>
+
+	   <script>
+	   	var x = document.getElementById("recent");
+	  	var y = document.getElementById("topRated");
+        var z = document.getElementById("mostRead");
+    
+    function markRecent(){
+    	x.style.borderBottom = "3px solid red";
+    	y.style.borderBottom = "0";
+    	z.style.borderBottom = "0";
+    }
+
+      function markTopRated(){
+    
+        x.style.borderBottom = "0";
+    	y.style.borderBottom = "3px solid red";
+    	z.style.borderBottom = "0";
+    	
+    }
+
+     function markMostRead(){
+    	x.style.borderBottom = "0";
+    	y.style.borderBottom = "0";
+    	z.style.borderBottom = "3px solid red";
+    }
+
+    function poetry(){
+    	document.getElementById("genreOfSortingSection").innerHTML = "poetry";
+    }
+    function fiction(){
+    	document.getElementById("genreOfSortingSection").innerHTML = "fiction";
+    }
+    function nonFiction(){
+    	document.getElementById("genreOfSortingSection").innerHTML = "non fiction";
+    }
+    function dictionary(){
+    	document.getElementById("genreOfSortingSection").innerHTML = "dictionary";
+    }
+    function articles(){
+    	document.getElementById("genreOfSortingSection").innerHTML = "articles";
+    }
+    function review(){
+    	document.getElementById("genreOfSortingSection").innerHTML = "review";
+    }
+</script>
+
+   
+</body>
+</html>
